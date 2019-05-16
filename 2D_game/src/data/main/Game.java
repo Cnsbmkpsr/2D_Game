@@ -2,6 +2,7 @@ package data.main;
 
 import java.awt.Canvas;
 
+
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.KeyListener;
@@ -25,7 +26,7 @@ public class Game extends Canvas implements Runnable{
   public Game() {
 	  
 	handler = new Handler(); 
-	this.addKeyListener(new KeyInput());
+	this.addKeyListener(new KeyInput(handler));
 
     new Window(WIDTH, HEIGHT, "Let's Build a Game !", this);
     
@@ -85,7 +86,7 @@ public class Game extends Canvas implements Runnable{
       
       if(System.currentTimeMillis() - timer > 1000) {
         timer += 1000;
-        System.out.println("FPS: " + frames);
+        //System.out.println("FPS: " + frames);
         frames = 0;
       }
     }
