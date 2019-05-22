@@ -9,7 +9,7 @@ public class KeyInput extends KeyAdapter {
 	private Handler handler;
 	
 	public KeyInput(Handler handler) {
-		this.handler = handler;
+		this.handler = handler; 
 	}
 
 	
@@ -27,6 +27,8 @@ public class KeyInput extends KeyAdapter {
 				if(key == KeyEvent.VK_Q) tempObject.setVelX(-5);
 				if(key == KeyEvent.VK_D) tempObject.setVelX(5);
 			}
+			
+			/*
 			if(tempObject.getId() == ID.Player2) {
 				//key events for player 2
 				
@@ -35,6 +37,7 @@ public class KeyInput extends KeyAdapter {
 				if(key == KeyEvent.VK_LEFT) tempObject.setVelX(-5);
 				if(key == KeyEvent.VK_RIGHT) tempObject.setVelX(5);
 			}
+			*/
 		}
 		
 
@@ -58,6 +61,7 @@ public class KeyInput extends KeyAdapter {
 				if(key == KeyEvent.VK_Q) tempObject.setVelX(0);
 				if(key == KeyEvent.VK_D) tempObject.setVelX(0);
 			}
+			/*
 			if(tempObject.getId() == ID.Player2) {
 				//key events for player 2
 				
@@ -66,7 +70,9 @@ public class KeyInput extends KeyAdapter {
 				if(key == KeyEvent.VK_LEFT) tempObject.setVelX(0);
 				if(key == KeyEvent.VK_RIGHT) tempObject.setVelX(0);
 			}
+			*/
 		}
+		if(key == KeyEvent.VK_ESCAPE) System.exit(1);
 
 	}
 
