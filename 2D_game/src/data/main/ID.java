@@ -4,6 +4,7 @@ public enum ID { //Enumeration for player and enemy
   
   Player(),
   BasicEnemy(),
-  Trail,
+  Trail(),
+  FastEnemy(),
 
 }
