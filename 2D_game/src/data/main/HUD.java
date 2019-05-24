@@ -16,6 +16,8 @@ public class HUD {
 		greenValue = Game.clamp(greenValue,  0,  255);
 		
 		greenValue = HEALTH*2;
+		
+		score++;
 	}
 	
 	public void render(Graphics g) {
@@ -26,6 +28,7 @@ public class HUD {
 		g.setColor(Color.white);
 		g.drawRect(15, 15, 200, 32);
 		
+		
 		//Creat health barre turn green to red
 		
 		g.drawString("Score: " + score, 15,  64);
@@ -35,5 +38,21 @@ public class HUD {
 		
 	}
 	
+	public void score(int score) {
+		this.score = score;
+	}
+	
+	public int getScore() {
+		return score;
+	}
+	
+	public int getLevel() {
+		return level;
+	}
 
-}
+	public void setLevel(int i) {
+		
+	}
+	
+
+} 
