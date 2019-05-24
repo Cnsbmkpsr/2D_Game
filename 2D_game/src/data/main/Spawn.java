@@ -34,7 +34,7 @@ public class Spawn {
 			}
 			else if(hud.getLevel() == 4) {
 				handler.addObject(new FastEnemy(r.nextInt(Game.WIDTH - 50), r.nextInt(Game.HEIGHT - 50), ID.FastEnemy, handler));
-// te
+// test
 			}
 		}
 		
