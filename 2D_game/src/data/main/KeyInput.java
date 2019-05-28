@@ -7,9 +7,17 @@ import java.awt.event.KeyListener;
 public class KeyInput extends KeyAdapter {
 	
 	private Handler handler;
+	private boolean[] KeyDown = new boolean[4];
 	
 	public KeyInput(Handler handler) {
 		this.handler = handler; 
+		
+		KeyDown[0] = false;
+		KeyDown[1] = false;
+		KeyDown[2] = false;
+		KeyDown[3] = false;
+		
+		
 	}
 
 	
@@ -22,10 +30,10 @@ public class KeyInput extends KeyAdapter {
 			if(tempObject.getId() == ID.Player) {
 				//key events for player 1
 				
-				if(key == KeyEvent.VK_Z) tempObject.setVelY(-5);
-				if(key == KeyEvent.VK_S) tempObject.setVelY(5);
-				if(key == KeyEvent.VK_Q) tempObject.setVelX(-5);
-				if(key == KeyEvent.VK_D) tempObject.setVelX(5);
+				if(key == KeyEvent.VK_Z) { tempObject.setVelY(-5); KeyDown[0] = true; }
+				if(key == KeyEvent.VK_S) { tempObject.setVelY(5); KeyDown[1] = true; }
+				if(key == KeyEvent.VK_Q) { tempObject.setVelX(-5); KeyDown[2] = true; }
+				if(key == KeyEvent.VK_D) { tempObject.setVelX(5); KeyDown[3] = true; }
 			}
 			
 			/*
@@ -56,11 +64,18 @@ public class KeyInput extends KeyAdapter {
 			if(tempObject.getId() == ID.Player) {
 				//key events for player 1
 				
-				if(key == KeyEvent.VK_Z) tempObject.setVelY(0);
-				if(key == KeyEvent.VK_S) tempObject.setVelY(0);
-				if(key == KeyEvent.VK_Q) tempObject.setVelX(0);
-				if(key == KeyEvent.VK_D) tempObject.setVelX(0);
+				if(key == KeyEvent.VK_Z) KeyDown[0] = false;//tempObject.setVelY(0);
+				if(key == KeyEvent.VK_S) KeyDown[1] = false;//tempObject.setVelY(0);
+				if(key == KeyEvent.VK_Q) KeyDown[2] = false;//tempObject.setVelX(0);
+				if(key == KeyEvent.VK_D) KeyDown[3] = false;//tempObject.setVelX(0);
 			}
+			
+// 		==== Vertical Mouvement ====
+			if(!KeyDown[0] && !KeyDown[1]) tempObject.setVelY(0);
+			
+//		==== Horizon Mouvement ====
+			if(!KeyDown[2] && !KeyDown[3]) tempObject.setVelX(0);
+			
 			/*
 			if(tempObject.getId() == ID.Player2) {
 				//key events for player 2
