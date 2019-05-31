@@ -1,8 +1,10 @@
 package data.main;
 
-public enum ID {
+public enum ID { //Enumeration for player and enemy
   
   Player(),
-  Enemy; //Creat enumeration for Player and enemy
+  BasicEnemy(),
+  Trail(),
+  FastEnemy(),
 
 }
