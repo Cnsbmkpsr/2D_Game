@@ -5,11 +5,11 @@ import java.awt.Rectangle;
 
 public abstract class GameObject {
   
-  protected int x;
-  protected int y;
+  protected float x;
+  protected float y;
   protected ID id;
-  protected int velX;
-  protected int velY;
+  protected float velX;
+  protected float velY;
   
   //Les objets du jeu, tous les objets du jeu
   
@@ -29,10 +29,10 @@ public abstract class GameObject {
   public void setY(int y) {
     this.y = y;
   }
-  public int getX() {
+  public float getX() {
     return x;
   }
-  public int GetY() {
+  public float GetY() {
     return y;
   }
   public void setId(ID id) {
@@ -41,16 +41,16 @@ public abstract class GameObject {
   public ID getId() {
     return id;
   }
-  public void setVelX(int velX) {
+  public void setVelX(float velX) {
     this.velX = velX;
   }
-  public void setVelY(int velY) {
+  public void setVelY(float velY) {
     this.velY = velY;
   }
-  public int getVelX() {
+  public float getVelX() {
     return velX;
   }
-  public int getVelY() {
+  public float getVelY() {
     return velY;
   }
   

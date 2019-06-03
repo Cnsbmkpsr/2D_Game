@@ -22,7 +22,7 @@ public class Player extends GameObject{
   }
   
   public Rectangle getBounds() {
-	  return new Rectangle(x, y, 32, 32);
+	  return new Rectangle((int)x,(int) y, 32, 32);
   }
 
   public void tick() {
@@ -70,7 +70,7 @@ public class Player extends GameObject{
 */	  
 	g.setColor(Color.white); //if(id == ID.Player) 
 	  //else if(id == ID.Player2) g.setColor(Color.red);
-    g.fillRect(x, y, 32, 32);
+    g.fillRect((int)x,(int) y, 32, 32);
   }
   
   
