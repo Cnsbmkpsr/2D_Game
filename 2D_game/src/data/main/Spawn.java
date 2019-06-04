@@ -24,12 +24,12 @@ public class Spawn {
 			
 			
 			if(hud.getLevel() == 1) {
-			handler.addObject(new BasicEnemy(r.nextInt(Game.WIDTH), r.nextInt(Game.HEIGHT), ID.BasicEnemy, handler));
+				handler.addObject(new BasicEnemy(r.nextInt(Game.WIDTH), r.nextInt(Game.HEIGHT), ID.BasicEnemy, handler));
 			System.out.println("hud.getlevel == 1");
 			}
 			else if(hud.getLevel() == 2){
 				handler.addObject(new BasicEnemy(r.nextInt(Game.WIDTH - 50), r.nextInt(Game.HEIGHT - 50), ID.BasicEnemy, handler));
-				handler.addObject(new BasicEnemy(r.nextInt(Game.WIDTH - 50), r.nextInt(Game.HEIGHT - 50), ID.BasicEnemy, handler));
+				handler.addObject(new EnemyBoss1(r.nextInt(Game.WIDTH), r.nextInt(Game.HEIGHT), ID.EnemyBoss1, handler));
 				System.out.println("hud.getlevel == 2");
 			}
 			else if(hud.getLevel() == 3) {
