@@ -3,10 +3,13 @@ package data.main;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
+import java.util.Random;
 
 public class EnemyBoss1 extends GameObject{
 	
 	private Handler handler;
+	Random r = new Random();
+	
 	private int timer = 80;
 	private int timer2 = 50;
 
@@ -36,6 +39,8 @@ public class EnemyBoss1 extends GameObject{
 		if(timer2 <= 0)
 		{
 			if(velX == 0) velX = 2;
+			int spawn = r.nextInt(10);
+			if(spawn == 0) handler.addObject(new EnemyBoss1Bullet((int)x+48, (int)y+48, ID.BasicEnemy, handler));
 		}
 		
 		
