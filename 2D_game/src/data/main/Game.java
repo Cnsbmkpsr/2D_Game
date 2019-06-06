@@ -40,6 +40,8 @@ public class Game extends Canvas implements Runnable{
 
       //handler.addObject(new Player(r.nextInt(WIDTH), r.nextInt(HEIGHT), ID.Player));
       handler.addObject(new Player(WIDTH/2-32, HEIGHT/2-32, ID.Player, handler));
+		handler.addObject(new EnemyBoss1((Game.WIDTH / 2) - 48, - 120, ID.EnemyBoss1, handler));
+
       //for(int i = 0; i < 10; i++)
       // génération des enemy en masse
       //handler.addObject(new BasicEnemy(r.nextInt(WIDTH), r.nextInt(HEIGHT), ID.BasicEnemy, handler));
